@@ -1,2 +1,3 @@
 # Rock-Paper-Scissors
-simple rock paper scissors game
+
+A very simple approach to a Rock-Paper-Scissors game with logical code for beginners to follow from.
