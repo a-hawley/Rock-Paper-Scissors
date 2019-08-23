@@ -1,20 +1,26 @@
 from os import system, name
 from random import choice
 
+# List of computer's moves
 commands = ["rock", "paper", "scissors"]
 
 
+# Clear screen after text (ONLY WORKS IN TERMINAL, NOT IDLE -- COMMENT OUT AND REPLACE WITH 'print("\n" * 20)')
 def clear_screen():
     system('cls' if name == 'nt' else 'clear')
 
 
 def main():
 
-    choice1 = choice(commands)
-    decision = choice1
+    # Pseudo-random commands choice
+    decision = choice(commands)
+    # Condition to keep program running
     boolz = True
+    # 'No' responses accepted
     n_list = ["n", "no", "exit"]
+    # Welcome message
     print("Welcome to the game!  Type exit to end the game at any time.")
+    # Begin loop
     while boolz:
         user = input("Choose rock, paper, or scissors:\n")
         if user.lower() == decision:
@@ -35,7 +41,7 @@ def main():
             print("Like a knife through butter, you're cut into tiny bits.  Not going very well.")
         else:
             print("Invalid input, try again!")
-
+        # Opt player in/out
         replay = input("Do you want to play again?\n")
         if replay.lower() in n_list:
             break
@@ -43,4 +49,5 @@ def main():
             clear_screen()
 
 
+# Run program
 main()
